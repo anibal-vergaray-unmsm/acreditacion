@@ -1,0 +1,81 @@
+{%extends "index.html" %}
+{% load staticfiles %}
+
+{%block main%}
+<p align="center" class="text-sucess fa-2x"> EDITAR DOCENTE </p>
+<form method="post" class="form-horizontal">
+	{% csrf_token%}
+
+	<div class="form-group">
+		<label for="{{ form.DOC_COD.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_COD.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_COD}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_DNI.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_DNI.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_DNI}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_CELU.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_CELU.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_CELU}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_EMAIL.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_EMAIL.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_EMAIL}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_NOMBRE.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_NOMBRE.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_NOMBRE}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_APE.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_APE.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_APE}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_SEXO.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_SEXO.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_SEXO}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_NAC.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_NAC.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_NAC}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.DOC_ESTADO.id_for_label}}"
+				class="col-sm-2 control-label">{{ form.DOC_ESTADO.label}}</label>
+		<div class="col-sm-8">
+			{{form.DOC_ESTADO}}
+		</div>				
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset2 col-sm-8">
+				<input class="btn btn-primary pull-right" type="submit" name="submit" value="Guardar">
+		</div>				
+	</div>
+
+</form>
+
+{%endblock%}

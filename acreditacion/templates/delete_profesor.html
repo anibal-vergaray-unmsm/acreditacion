@@ -1,0 +1,19 @@
+{%extends "index.html" %}
+{% load staticfiles %}
+
+{%block main%}
+<p align="center" class="text-sucess fa-2x"> EDITAR DOCENTE </p>
+<form method="post" class="form-horizontal">
+	{% csrf_token%}
+
+	<p class="-align--center text-danger">Seguro que desea eliminar al Docente {{docente}}?</p>
+
+	<div class="form-group">
+		<div class="col-sm-offset2 col-sm-8">
+				<input class="btn btn-danger pull-right" type="submit" name="submit" value="ELIMINAR">
+		</div>				
+	</div>
+
+</form>
+
+{%endblock%}
