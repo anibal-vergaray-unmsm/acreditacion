@@ -1,0 +1,48 @@
+
+{%extends "index.html" %}
+
+{% load staticfiles %}
+
+{%block main%}
+<p align="center" class="text-sucess fa-2x"> NUEVA EVALUACIÓN Y PERFECCIONAMIENTO</p>
+<form method="post" class="form-horizontal">
+	{% csrf_token%}
+
+	<div class="form-group">
+		<label for="{{ form.EVA_TIPO.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.EVA_TIPO.label}}</label>
+		<div class="col-sm-8">
+			{{form.EVA_TIPO}}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="{{ form.EVA_OBSERVACION.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.EVA_OBSERVACION.label}}</label>
+		<div class="col-sm-8">
+			{{form.EVA_OBSERVACION}}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="{{ form.docentes.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.docentes.label}}</label>
+		<div class="col-sm-8">
+			{{form.docentes}}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="{{ form.resolucion.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.resolucion.label}}</label>
+		<div class="col-sm-8">
+			{{form.resolucion}}
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset2 col-sm-8">
+				<input class="btn btn-primary pull-right" type="submit" name="submit" value="Guardar">
+		</div>				
+	</div>
+
+
+</form>
+
+{%endblock%}

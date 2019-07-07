@@ -1,0 +1,62 @@
+
+{%extends "index.html" %}
+
+{% load staticfiles %}
+
+{%block main%}
+<p align="center" class="text-sucess fa-2x"> NUEVA RESOLUCIÓN </p>
+<form method="post" class="form-horizontal">
+	{% csrf_token%}
+
+	<div class="form-group">
+		<label for="{{ form.RES_FECHA.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.RES_FECHA.label}}</label>
+		<div class="col-sm-8">
+			{{form.RES_FECHA}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.RES_DESCRIP.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.RES_DESCRIP.label}}</label>
+		<div class="col-sm-8">
+			{{form.RES_DESCRIP}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.RES_EXPEDIENTE.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.RES_EXPEDIENTE.label}}</label>
+		<div class="col-sm-8">
+			{{form.RES_EXPEDIENTE}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.RES_TIPO.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.RES_TIPO.label}}</label>
+		<div class="col-sm-8">
+			{{form.RES_TIPO}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.RES_CATEG.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.RES_CATEG.label}}</label>
+		<div class="col-sm-8">
+			{{form.RES_CATEG}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<label for="{{ form.RES_CLASE.id_for_label }}"
+				class="col-sm-2 control-label">{{ form.RES_CLASE.label}}</label>
+		<div class="col-sm-8">
+			{{form.RES_CLASE}}
+		</div>				
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset2 col-sm-8">
+				<input class="btn btn-primary pull-right" type="submit" name="submit" value="Guardar">
+		</div>				
+	</div>
+
+
+</form>
+
+{%endblock%}
